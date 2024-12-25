@@ -29,7 +29,7 @@ const Application = () => {
       <GameStatus isWinner={isWinner} hasGuessed={hasGuessed} />
       <button
         onClick={() => {
-          setCorrectAnswer(generateRandomColor());
+          setCorrectAnswer(() => generateRandomColor);
           setHasGuessed(false);
           setColorGuess('');
         }}
